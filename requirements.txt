@@ -1,0 +1,12 @@
+attrs==23.2.0
+distro==1.9.0
+gitdb==4.0.11
+GitPython==3.1.43
+jsonschema==4.22.0
+jsonschema-specifications==2023.12.1
+kas @ git+https://github.com/siemens/kas.git@422e6032f6a86aa7a3d47671e31f08650e5bd228
+kconfiglib==14.1.0
+PyYAML==6.0.1
+referencing==0.35.1
+rpds-py==0.18.1
+smmap==5.0.1
