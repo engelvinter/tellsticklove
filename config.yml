@@ -27,7 +27,7 @@ repos:
     refspec: scarthgap
     layers:
       meta-oe:
-#     meta-python:
+      meta-python:
       meta-networking:
 #      meta-perl:
 
