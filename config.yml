@@ -27,7 +27,7 @@ repos:
     refspec: scarthgap
     layers:
       meta-oe:
-      meta-python:
+#     meta-python:
       meta-networking:
 #      meta-perl:
 
@@ -50,6 +50,7 @@ local_conf_header:
     SDKMACHINE = "x86_64"
     USER_CLASSES = "buildstats"
     PATCHRESOLVE = "noop"
+    ENABLE_UART = "1"
   systemd:
     INIT_MANAGER = "systemd"
   license:
