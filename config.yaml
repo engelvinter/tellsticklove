@@ -50,6 +50,8 @@ local_conf_header:
     SDKMACHINE = "x86_64"
     USER_CLASSES = "buildstats"
     PATCHRESOLVE = "noop"
+  systemd:
+    INIT_MANAGER = "systemd"
   license:
     LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
   debug-tweaks: |
