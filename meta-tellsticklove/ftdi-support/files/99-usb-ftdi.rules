@@ -1,0 +1,1 @@
+ACTION=="add", ATTRS{idVendor}=="1781", ATTRS{idProduct}=="0c31", RUN+="/sbin/modprobe ftdi_sio", RUN+="/sbin/modprobe usbserial"
