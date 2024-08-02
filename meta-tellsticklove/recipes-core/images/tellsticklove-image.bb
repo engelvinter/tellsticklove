@@ -3,5 +3,5 @@ include recipes-core/images/rpi-test-image.bb
 
 COMPATIBLE_MACHINE = "^rpi$"
 
-IMAGE_INSTALL += " dropbear libconfuse libftdi ftdi-support"
+IMAGE_INSTALL += " dropbear libconfuse libftdi ftdi-modprobe"
 IMAGE_FEATURES += " ssh-server-dropbear"
