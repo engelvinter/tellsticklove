@@ -10,7 +10,7 @@ SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git/telldus-core"
 
-inherit cmake
+inherit cmake pkgconfig
 
 DEPENDS = "libconfuse libftdi"
 
