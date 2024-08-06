@@ -8,7 +8,7 @@ LICENSE = "CLOSED"
 SRC_URI = "git://github.com/engelvinter/telldus.git;branch=scarthgap;protocol=https"
 SRCREV = "${AUTOREV}"
 
-S = "${WORKDIR}/git"
+S = "${WORKDIR}/git/telldus-core"
 
 inherit cmake
 
