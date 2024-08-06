@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/engelvinter/telldus"
 LICENSE = "CLOSED"
 
 SRC_URI = "git://github.com/engelvinter/telldus.git;branch=scarthgap;protocol=https"
-#SRCREV = "abcdef1234567890abcdef1234567890abcdef12"
+SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"
 
