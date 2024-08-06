@@ -5,7 +5,7 @@ DESCRIPTION = "Telldus Core is a software to control remote switches, for exampl
 HOMEPAGE = "https://github.com/engelvinter/telldus"
 LICENSE = "CLOSED"
 
-SRC_URI = "git://github.com:engelvinter/telldus.git;branch=scarthgap;protocol=https"
+SRC_URI = "git://github.com/engelvinter/telldus.git;branch=scarthgap;protocol=https"
 #SRCREV = "abcdef1234567890abcdef1234567890abcdef12"
 
 S = "${WORKDIR}/git"
