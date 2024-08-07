@@ -22,7 +22,7 @@ do_install() {
     install -d ${D}${libdir}
     install -d ${D}${includedir}
 
-    oe_runmake install DESTDIR=${D}
+    cd ${S} && oe_runmake install DESTDIR=${D}
 }
 
 PACKAGES =+ "${PN}-dev ${PN}-dbg"
