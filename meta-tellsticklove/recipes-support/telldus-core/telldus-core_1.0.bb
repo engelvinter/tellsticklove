@@ -16,18 +16,3 @@ DEPENDS = "libconfuse libftdi"
 
 EXTRA_OECMAKE = ""
 
-#do_install() {
-#    install -d ${D}${bindir}
-#    install -d ${D}${sysconfdir}
-#    install -d ${D}${libdir}
-#    install -d ${D}${includedir}
-#    echo "Running oe_runmake in $(pwd)"
-#    oe_runmake -n install DESTDIR=${D}
-#    cd ${S} && oe_runmake install DESTDIR=${D}
-#}
-
-#PACKAGES =+ "${PN}-dev ${PN}-dbg"
-
-#FILES_${PN} = "${bindir}/* ${sysconfdir}/* ${libdir}/* ${includedir}/*"
-#FILES_${PN}-dev = "${includedir}/* ${libdir}/*.so ${libdir}/pkgconfig"
-#FILES_${PN}-dbg = "${libdir}/debug"
