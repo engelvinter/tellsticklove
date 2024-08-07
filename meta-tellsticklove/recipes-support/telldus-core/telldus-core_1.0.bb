@@ -21,7 +21,7 @@ do_install() {
     install -d ${D}${sysconfdir}
     install -d ${D}${libdir}
     install -d ${D}${includedir}
-
+    oe_runmake -n install DESTDIR=${D}
     cd ${S} && oe_runmake install DESTDIR=${D}
 }
 
