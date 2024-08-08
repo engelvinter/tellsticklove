@@ -6,7 +6,7 @@ inherit systemd
 SYSTEMD_AUTO_ENABLE = "enable"
 SYSTEMD_SERVICE_${PN} = "telldusd.service"
 
-SRC_URI_append = "file://telldusd.service"
+SRC_URI += "file://telldusd.service"
 FILES_${PN} += "${systemd_unitdir}/system/telldusd.service"
 
 do_install_append() {
