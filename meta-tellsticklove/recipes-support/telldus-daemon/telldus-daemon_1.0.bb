@@ -1,3 +1,4 @@
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 LICENSE="CLOSED"
 
