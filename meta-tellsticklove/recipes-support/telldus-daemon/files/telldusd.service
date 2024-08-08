@@ -1,0 +1,13 @@
+[Unit]
+Description=Telldus TellStick Core Daemon
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/telldusd
+Restart=on-failure
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
