@@ -4,7 +4,7 @@ LICENSE="CLOSED"
 
 inherit systemd
 
-SYSTEMD_AUTO_ENABLE = "enable"
+SYSTEMD_AUTO_ENABLE_${PN} = "enable"
 SYSTEMD_SERVICE_${PN} = "telldusd.service"
 
 SRC_URI += "file://telldusd.service"
