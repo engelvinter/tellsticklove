@@ -11,9 +11,11 @@ SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git"
 
 # Specify dependencies if any
-RDEPENDS:${PN} = "python3 python3-pyyaml pip-paho-mqtt pip-asyncio pip-dotmap pip-pyaml-env pip-tellcore-py"
+RDEPENDS:${PN} = "python3 python3-pyyaml pip-paho-mqtt pip-asyncio pip-dotmap pip-pyaml-env pip-tellcore-py-dev"
 
 inherit python3-dir
+
+INSANE_SKIP:${PN} += "dev-deps"
 
 # Define where to install the files
 do_install() {
