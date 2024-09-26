@@ -11,7 +11,7 @@ SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git"
 
 # Specify dependencies if any
-RDEPENDS:${PN} = "python3 python3-pyyaml pip-paho-mqtt pip-asyncio pip-dotmap pip-pyaml-env pip-tellcore-py-dev"
+RDEPENDS:${PN} = "python3 python3-pyyaml pip-paho-mqtt pip-asyncio pip-dotmap pip-pyaml-env pip-tellcore-py"
 
 inherit python3-dir
 

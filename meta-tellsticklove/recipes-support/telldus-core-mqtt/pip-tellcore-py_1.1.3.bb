@@ -6,7 +6,7 @@ HOMEPAGE ="https://pypi.org/project/tellcore-py"
 LICENSE = "GPLv3+"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=d32239bcb673463ab874e80d47fae504"
 
-inherit pypi
+inherit pypi setuptools3
 
 RDEPENDS:${PN} += "python3-wheel"
 
