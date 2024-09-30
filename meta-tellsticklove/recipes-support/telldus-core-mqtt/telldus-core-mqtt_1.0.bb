@@ -13,7 +13,13 @@ S = "${WORKDIR}/git"
 # Specify dependencies if any
 RDEPENDS:${PN} = "python3 python3-pyyaml pip-paho-mqtt pip-asyncio pip-dotmap pip-pyaml-env pip-tellcore-py"
 
-inherit python3-dir
+inherit python3-dir systemd
+
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
+SYSTEMD_SERVICE:${PN} = "telldus-core-mqtt.service"
+
+SRC_URI += "file://telldus-core-mqtt.service"
+FILES:${PN} += "${systemd_unitdir}/system/telldus-core-mqtt.service"
 
 INSANE_SKIP:${PN} += "dev-deps"
 
@@ -27,6 +33,9 @@ do_install() {
     echo '#!/bin/sh' > ${D}${bindir}/telldus-core-mqtt
     echo 'python3 ${datadir}/telldus-core-mqtt/telldus-core-mqtt.py "$@"' >> ${D}${bindir}/telldus-core-mqtt
     chmod +x ${D}${bindir}/telldus-core-mqtt
+
+    install -d ${D}${systemd_unitdir}/system
+    install -m 0644 ${WORKDIR}/telldus-core-mqtt.service ${D}${systemd_unitdir}/system/
 }
 
 # FILES_${PN} specifies what files should be packaged

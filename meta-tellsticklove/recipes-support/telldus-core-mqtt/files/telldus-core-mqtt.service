@@ -1,0 +1,16 @@
+[Unit]
+Description=Telldus Core MQTT
+After=telldusd.service
+Requires=telldusd.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/share/telldus-core-mqtt/main.py
+WorkingDirectory=/usr/share/telldus-core-mqtt
+#TimeoutStartSec=60
+Restart=on-failure
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
