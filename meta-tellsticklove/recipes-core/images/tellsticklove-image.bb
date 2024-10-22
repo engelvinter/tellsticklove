@@ -3,7 +3,18 @@ include recipes-core/images/rpi-test-image.bb
 
 COMPATIBLE_MACHINE = "^rpi$"
 
-IMAGE_INSTALL += " dropbear libconfuse libftdi ftdi-modprobe telldus-core telldus-daemon telldus-core-mqtt docker-compose mosquitto mosquitto-clients"
+IMAGE_INSTALL += " dropbear \
+                   libconfuse \
+                   libftdi \
+                   ftdi-modprobe \
+                   telldus-core \
+                   telldus-daemon \
+                   telldus-core-mqtt \
+                   docker-compose \
+                   mosquitto \
+                   mosquitto-clients \
+                   home-assistant"
+
 IMAGE_FEATURES += " ssh-server-dropbear"
 
 # 32 GB SD card - add 25 GB to the root filesystem size

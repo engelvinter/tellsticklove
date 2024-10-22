@@ -1,0 +1,14 @@
+[Unit]
+Description=My Service with Variables
+After=telldus-core-mqtt.service
+Requires=telldus-core-mqtt.service
+
+[Service]
+ExecStartPre=/bin/sh -c '[ "$(/usr/bin/docker images -q homeassistant/home-assistant:latest)" ] || exit 1'
+ExecStart=/usr/lib/docker/cli-plugins/docker-compose -f /root/home-assistant.yml up
+ExecStop=/usr/lib/docker/cli-plugins/docker-compose -f /root/home-assistant.yml down
+Restart=on-failure
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
