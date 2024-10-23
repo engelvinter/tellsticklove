@@ -5,8 +5,8 @@ Requires=telldus-core-mqtt.service
 
 [Service]
 ExecStartPre=/bin/sh -c '[ "$(/usr/bin/docker images -q homeassistant/home-assistant:latest)" ] || exit 1'
-ExecStart=/usr/lib/docker/cli-plugins/docker-compose -f /root/home-assistant.yml up
-ExecStop=/usr/lib/docker/cli-plugins/docker-compose -f /root/home-assistant.yml down
+ExecStart=/usr/lib/docker/cli-plugins/docker-compose -f /etc/docker/compose/home-assistant.yml up
+ExecStop=/usr/lib/docker/cli-plugins/docker-compose -f /etc/docker/compose/home-assistant.yml down
 Restart=on-failure
 TimeoutStartSec=0
 

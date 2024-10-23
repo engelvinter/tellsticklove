@@ -4,7 +4,7 @@ services:
     container_name: homeassistant
     image: homeassistant/home-assistant
     volumes:
-      - /home/root/homeassistant:/config
+      - /usr/share/home-assistant:/config
     ports:
       - "8123:8123"
     restart: unless-stopped

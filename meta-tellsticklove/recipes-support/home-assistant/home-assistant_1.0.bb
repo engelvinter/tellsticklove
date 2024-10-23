@@ -4,6 +4,10 @@ LICENSE = "CLOSED"
 
 inherit systemd
 
+# Specify dependencies if any
+DEPENDS = "docker-compose"
+RDEPENDS:${PN} = "docker-compose"
+
 SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 SYSTEMD_SERVICE:${PN} = "home-assistant.service"
 
@@ -19,4 +23,6 @@ do_install() {
     install -m 0644 ${WORKDIR}/home-assistant.service ${D}${systemd_unitdir}/system
     install -d ${D}${sysconfdir}/docker/compose
     install -m 0644 ${WORKDIR}/home-assistant.yml ${D}${sysconfdir}/docker/compose
+
+    install -d ${D}${datadir}/home-assistant
 }
