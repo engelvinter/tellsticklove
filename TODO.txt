@@ -1,0 +1,6 @@
+* Add log2ram
+* Change to "cache" more when file writing before flushing
+* Change to restricted ssh login
+* Turn off connection from outside in MQTT
+* Lock to version in git repos when cloning
+* Fix all the licenses in the recipes
