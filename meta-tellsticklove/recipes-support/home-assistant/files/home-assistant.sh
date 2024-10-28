@@ -25,6 +25,11 @@ elif [ "$1" = "stop" ]; then
   echo "Stopping home-assistant..."
   $DOCKER_COMPOSE -f $YAML_FILE down
 
+elif [ "$1" = "create" ]
+
+  echo "Creating home-assistant image..."
+  $DOCKER_COMPOSE -f $YAML_FILE create
+
 else
 
   echo "Invalid argument. Please use 'start' or 'stop'."

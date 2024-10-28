@@ -15,7 +15,7 @@ Login into the device using ssh:
 > ssh root@192.168.X.YYY
 
 Create the Home Assistant container:
-> docker-compose -f /etc/docker/compose/home-assistant create
+> home-assistant.sh create
 
 Wait for quite a while....
 
