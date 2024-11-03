@@ -65,8 +65,8 @@ local_conf_header:
     INIT_MANAGER = "systemd"
   license:
     LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
-  debug-tweaks: |
-    EXTRA_IMAGE_FEATURES = "debug-tweaks"
+#  debug-tweaks: |
+#    EXTRA_IMAGE_FEATURES = "debug-tweaks"
   virtual:
     DISTRO_FEATURES:append = " virtualization"
   diskmon: |
