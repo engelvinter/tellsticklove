@@ -1,6 +1,8 @@
 # Tellstick Love
 
 Tellstick Love is a yocto image for the Raspberry 3 model B and the Tellstick Duo (which is a 433 Mhz control unit from the former company Telldus).
+It is built around the telldus daemon (telldusd) to control the Tellstick Duo, the mosquitto MQTT broker and home assistant as container, all running on a Rasberry 3.
+
 
 First create a virtual python environment:
 > python -m venv venv
@@ -16,12 +18,6 @@ Login into the device using ssh:
 
 Edit the tellstick.conf file and add your switches and temperature sensors:
 > vi /etc/tellstick.conf
-
-If needed learn any sensors their unique id (selflearning):
-> tdtool -learn telldus_id
-
-Try any switches by executing:
-> tdtool --on telldus_id
 
 Create the Home Assistant container:
 > home-assistant.sh create
