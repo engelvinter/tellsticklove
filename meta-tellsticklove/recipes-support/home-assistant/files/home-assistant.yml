@@ -5,7 +5,6 @@ services:
     image: homeassistant/home-assistant
     volumes:
       - /usr/share/home-assistant:/config
-    ports:
-      - "8123:8123"
+    network_mode: "host"
     restart: unless-stopped
 
