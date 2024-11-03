@@ -10,3 +10,14 @@ mosquitto_sub -h localhost -t "#" -v
 
 **How to learn a 433 Mhz device its id using tellstick?**
 > tdtool -learn telldus_id
+
+**How to copy a 32 GB SD-card to your local harddrive?**  
+> lsblk  
+> sudo dd if=/dev/mmcblk0 of=your_path/your_name.img bs=4M status=progress
+
+**How to connect to the serial port on a raspberry? (Ubuntu 22.04)**  
+> sudo putty -serial /dev/ttyUSB0 -sercfg 115200
+
+**Where is the config files and database of home-assistant?**  
+See /usr/share/home-assistant
+

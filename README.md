@@ -28,10 +28,10 @@ Once finished:
 > reboot
 
 Log into home-assistant:
-* Set login and password
-* Set city
-* set date & time format in profile
-* Add MQTT integration. Use <ip-number> as broker since Mosquitto already running.
-* Verify that the devices are discovered
-* Create a label for the  switches
-* Create four automations: EveningTurnOn, EveningTurnOff, MorningTurnOn, MorningTurnOff
+* Set login and password.
+* Set city.
+* Set date & time format in profile.
+* Add MQTT integration. Use loop-back (127.0.0.1) as broker since Mosquitto already running.
+* Verify that the devices are discovered.
+* Create a label for the  switches.
+* Create four automations: EveningTurnOn, EveningTurnOff, MorningTurnOn, MorningTurnOff.
