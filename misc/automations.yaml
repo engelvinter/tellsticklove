@@ -1,54 +1,94 @@
 - id: '1730228516091'
   alias: EveningTurnOn
   description: ''
-  trigger:
-    - platform: numeric_state
-      entity_id: sun.sun
-      attribute: elevation
-      below: -1
-  condition: []
-  action:
-    - service: switch.turn_on
-      target:
-        label_id: switch
+  triggers:
+  - entity_id: sun.sun
+    attribute: elevation
+    below: -1
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - repeat:
+      count: 3
+      sequence:
+      - action: switch.turn_on
+        metadata: {}
+        data: {}
+        target:
+          label_id: switch
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 5
+          milliseconds: 0
   mode: single
 - id: '1730228609644'
   alias: EveningTurnOff
   description: ''
-  trigger:
-    - platform: time
-      at: '00:05:00'
-  condition: []
-  action:
-    - service: switch.turn_off
-      target:
-        label_id: switch
+  triggers:
+  - at: 00:05:00
+    trigger: time
+  conditions: []
+  actions:
+  - repeat:
+      count: 3
+      sequence:
+      - action: switch.turn_off
+        metadata: {}
+        data: {}
+        target:
+          label_id: switch
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 5
+          milliseconds: 0
   mode: single
 - id: '1730230008281'
   alias: MorningTurnOn
   description: ''
-  trigger:
-    - platform: time
-      at: '05:40:00'
-  condition:
-    - condition: sun
-      before: sunrise
-  action:
-    - service: switch.turn_on
-      target:
-        label_id: switch
+  triggers:
+  - at: 05:40:00
+    trigger: time
+  conditions:
+  - condition: sun
+    before: sunrise
+  actions:
+  - repeat:
+      count: 3
+      sequence:
+      - action: switch.turn_on
+        metadata: {}
+        data: {}
+        target:
+          label_id: switch
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 5
+          milliseconds: 0
   mode: single
 - id: '1730230072855'
   alias: MorningTurnOff
   description: ''
-  trigger:
-    - platform: numeric_state
-      entity_id: sun.sun
-      attribute: elevation
-      above: -1
-  condition: []
-  action:
-    - service: switch.turn_off
-      target:
-        label_id: switch
+  triggers:
+  - entity_id: sun.sun
+    attribute: elevation
+    above: -1
+    trigger: numeric_state
+  conditions: []
+  actions:
+  - repeat:
+      count: 3
+      sequence:
+      - action: switch.turn_off
+        metadata: {}
+        data: {}
+        target:
+          label_id: switch
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 5
+          milliseconds: 0
   mode: single
