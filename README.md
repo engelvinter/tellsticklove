@@ -1,8 +1,16 @@
 # Tellstick Love
 
-Tellstick Love is a yocto image for the Raspberry 3 model B and the Tellstick Duo (which is a 433 Mhz control unit from the former company Telldus).
-It is built around the telldus daemon (telldusd) to control the Tellstick Duo, the mosquitto MQTT broker and home assistant as container, all running on a Rasberry 3.
+## Introduction
 
+Tellstick Love is a yocto image for the Raspberry 3 model B and the Tellstick Duo (which is a 433 Mhz control unit from the former company Telldus).
+It is built around a number of software modules/programs running on a Rasberry PI 3:
+
+* telldus daemon (telldusd) to control the Tellstick Duo
+* telldus-core-mqtt (an mqtt client, publishing telldus devices in the MQTT> broker)
+* the mosquitto MQTT broker
+* home assistant as container, configured as below
+
+## How to Build and Configure
 
 First create a virtual python environment:
 > python -m venv venv
@@ -35,3 +43,6 @@ Log into home-assistant:
 * Verify that the devices are discovered.
 * Create a label for the  switches.
 * Create four automations: EveningTurnOn, EveningTurnOff, MorningTurnOn, MorningTurnOff.
+
+## Questions?
+[Frequently Asked Questions](FAQ.md)
