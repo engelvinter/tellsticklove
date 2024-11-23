@@ -16,16 +16,24 @@ First create a virtual python environment:
 > python -m venv venv
 > pip install -r requirements.txt
 
+Set the hashed password in tellsticklove-image.bb. Remember '$' shall have a proceeding backslash '\' i.e. \$.
+> mkpasswd -m SHA-512
+> vi ./meta-tellsticklove/recipes-core/images/tellsticklove-image.bb
+
 Build the yocto image using kas:
 > kas build config.yml
 
 Flash the yocto image to your 32 GB SD Card. Right now it is configured for this size.
 
-Login into the device using ssh:
-> ssh root@192.168.X.YYY
+Login into the device using ssh (for X and YYY - see your dhcp in your router):
+> ssh telldus@192.168.X.YYY
 
 Edit the tellstick.conf file and add your switches and temperature sensors:
 > vi /etc/tellstick.conf
+
+Remove registration of binary sensors of telldus-core-mqtt:
+Comment out row 262: callbacks.append(core.register_raw_device_event(raw_event))
+> vi /usr/share/telldus-core-mqtt/main.py
 
 Create the Home Assistant container:
 > home-assistant.sh create
