@@ -1,6 +1,15 @@
 **How to temporarily turn off login/password for the dropbear ssh daemon?**  
 In the file /etc/default/dropbear, insert **-B** in as extra args
 
+**Where is the config of telldus?**
+Check /etc/tellstick.conf
+
+**How to detect events from a device?**
+> tellcore_events --all --raw
+
+**I have changed /etc/tellstick.conf. How to make telldusd restart?**
+> systemctl restart telldusd
+
 **How to turn on a 433 Mhz device using tellstick?**
 > tdtool --on telldus_id
 
