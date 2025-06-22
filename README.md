@@ -43,6 +43,8 @@ Wait for quite a while....
 Once finished:
 > reboot
 
+Either do the following:
+
 Log into home-assistant:
 * Set login and password.
 * Set city.
@@ -51,6 +53,10 @@ Log into home-assistant:
 * Verify that the devices are discovered.
 * Create a label for the  switches.
 * Create four automations: EveningTurnOn, EveningTurnOff, MorningTurnOn, MorningTurnOff.
+
+or:
+
+* Import a backup file (.tar) from a previous setup of home assistant.
 
 ## Questions?
 [Frequently Asked Questions](FAQ.md)
