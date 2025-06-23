@@ -28,6 +28,7 @@ Build the yocto image using kas:
 > kas build config.yml
 
 Flash the yocto image to your 32 GB SD Card. Right now it is configured for this size.
+> sudo ./flash.sh
 
 Login into the device using ssh (for X and YYY - see your dhcp in your router):
 > ssh telldus@192.168.X.YYY
