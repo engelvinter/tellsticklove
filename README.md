@@ -8,7 +8,11 @@ It is built around a number of software modules/programs running on a Rasberry P
 * telldus daemon (telldusd) to control the Tellstick Duo
 * telldus-core-mqtt (an mqtt client, publishing telldus devices in the MQTT> broker)
 * the mosquitto MQTT broker
-* home assistant as container, configured as below
+* home assistant as container, configured as below in "How to Build and Configure"
+
+## System Architecture
+
+![System Architecture](docs/tellsticklove_system_image.drawio.png)
 
 ## How to Build and Configure
 
