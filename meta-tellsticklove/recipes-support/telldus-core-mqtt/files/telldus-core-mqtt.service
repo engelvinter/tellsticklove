@@ -5,7 +5,8 @@ Requires=telldusd.service mosquitto.service
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /usr/share/telldus-core-mqtt/main.py
+# only allowing remote 145081 as binary sensor
+ExecStart=/usr/bin/python3 /usr/share/telldus-core-mqtt/main.py --filter_bin=14508110
 WorkingDirectory=/usr/share/telldus-core-mqtt
 #TimeoutStartSec=60
 Restart=on-failure
