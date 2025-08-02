@@ -4,7 +4,7 @@ HOMEPAGE = "https://github.com/engelvinter/telldus-core-mqtt"
 LICENSE = "CLOSED"
 
 # Source location
-SRC_URI = "git://github.com/engelvinter/telldus-core-mqtt.git;branch=feature/bin_filter;protocol=https"
+SRC_URI = "git://github.com/engelvinter/telldus-core-mqtt.git;branch=feature/filter;protocol=https"
 SRCREV = "${AUTOREV}"
 
 # Destination directory for the cloned repo
