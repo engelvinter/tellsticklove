@@ -36,10 +36,6 @@ Login into the device using ssh (for X and YYY - see your dhcp in your router):
 Edit the tellstick.conf file and add your switches and temperature sensors:
 > vi /etc/tellstick.conf
 
-Remove registration of binary sensors of telldus-core-mqtt:
-Comment out row 262: callbacks.append(core.register_raw_device_event(raw_event))
-> vi /usr/share/telldus-core-mqtt/main.py
-
 Create the Home Assistant container:
 > home-assistant.sh create
 
