@@ -13,8 +13,7 @@ IMAGE_INSTALL += " sudo \
                    telldus-core-mqtt \
                    docker-compose \
                    mosquitto \
-                   mosquitto-clients \
-                   home-assistant"
+                   mosquitto-clients"
 
 IMAGE_FEATURES += " ssh-server-dropbear"
 
