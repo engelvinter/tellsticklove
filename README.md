@@ -17,11 +17,11 @@ It is built around a number of software modules/programs running on a Rasberry P
 ## How to Build and Configure
 
 First create a virtual python environment:
-> python -m venv venv
+> python -m venv venv  
 > pip install -r requirements.txt
 
 Set the hashed password in tellsticklove-image.bb. Remember '$' shall have a proceeding backslash '\' i.e. \$.
-> mkpasswd -m SHA-512
+> mkpasswd -m SHA-512  
 > vi ./meta-tellsticklove/recipes-core/images/tellsticklove-image.bb
 
 Build the yocto image using kas:
