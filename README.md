@@ -16,8 +16,15 @@ It is built around a number of software modules/programs running on a Rasberry P
 
 ## How to Build and Configure
 
-First create a virtual python environment:
+This project uses [Yocto Scarthgap](https://www.yoctoproject.org/)
+
+First checkout:
+> git clone git@github.com:engelvinter/tellsticklove.git  
+> cd tellsticklove  
+
+Create a virtual python environment:
 > python -m venv venv  
+> source venv/bin/activate
 > pip install -r requirements.txt
 
 Set the hashed password in tellsticklove-image.bb. Remember '$' shall have a proceeding backslash '\' i.e. \$.
