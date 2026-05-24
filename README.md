@@ -31,6 +31,9 @@ Set the hashed password in tellsticklove-image.bb. Remember '$' shall have a pro
 > mkpasswd -m SHA-512  
 > vi ./meta-tellsticklove/recipes-core/images/tellsticklove-image.bb
 
+Turn off AppArmour temporarily for this session on Ubuntu 26.04:
+> echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns  
+
 Build the yocto image using kas:
 > kas build config.yml
 
